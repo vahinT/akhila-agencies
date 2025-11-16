@@ -1,0 +1,164 @@
+/* =========== GLOBAL FONT + BACKGROUND =========== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #fff;
+
+  /* animated gradient */
+  background: linear-gradient(135deg, #0f0c29, #302b63, #ff008c);
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+/* =========== NAVBAR (FIXED & RESPONSIVE) =========== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 12px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+
+  z-index: 1000;
+
+  /* prevents the “Contact” link from disappearing */
+  flex-wrap: nowrap;
+  overflow-x: auto;        
+  scrollbar-width: none;   
+}
+
+.navbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* left side */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.logo {
+  height: 40px;
+  border-radius: 8px;
+}
+
+.brand-name {
+  font-size: 1.3em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* right side links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  white-space: nowrap; 
+  flex-shrink: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05em;
+  transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #ffe57f;
+}
+
+
+
+/* =========== HERO SECTION =========== */
+.hero {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero-text h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: rgba(255,255,255,0.8);
+  color: #000;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #fff;
+}
+
+
+
+/* =========== GLASS SECTIONS =========== */
+.glass {
+  margin: 40px auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 900px;
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
+
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+h2 {
+  color: #ffe57f;
+  margin-bottom: 15px;
+}
+
+
+
+/* =========== FOOTER =========== */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  opacity: 0.8;
+}
